@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Link</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        input {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            margin-top: 10px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Password Protected Link</h1>
+    <p>Please enter the password to access the link:</p>
+    <input type="password" id="passwordInput" placeholder="Enter password">
+    <button onclick="checkPassword()">Submit</button>
+
+    <p id="message"></p>
+
+    <script>
+        const correctPassword = "1234"; // Set your password here
+        const targetLink = "https://example.com"; // Set the link to protect
+
+        function checkPassword() {
+            const userPassword = document.getElementById("passwordInput").value;
+
+            if (userPassword === correctPassword) {
+                // Redirect to the protected link
+                window.location.href = targetLink;
+            } else {
+                // Show an error message
+                document.getElementById("message").textContent = "Incorrect password. Please try again.";
+            }
+        }
+    </script>
+</body>
+</html>
