@@ -3,18 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VILLA LOBBY</title>
+    <title>Password Protected Link</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://github.com/villa-2023/interncurriculumnewcomer/blob/35b2af0d97e9837b0ed3d34ba420ab4069fc25a9/tyler-lastovich-2_jtT9tWZKQ-unsplash.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            color: white; /* Adjust text color for better readability */
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 400px;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
         input {
             margin: 10px;
             padding: 10px;
             font-size: 16px;
-            width: 200px;
+            width: calc(100% - 22px); /* Full width minus padding and borders */
+            border-radius: 5px;
+            border: 1px solid #ccc;
         }
         button {
             padding: 10px 20px;
@@ -24,6 +39,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            width: 100%;
         }
         button:hover {
             background-color: #0056b3;
@@ -35,12 +51,13 @@
     </style>
 </head>
 <body>
-    <h1>VILLA FRONTDESK</h1>
-    <p>Please enter the password to access the link:</p>
-    <input type="password" id="passwordInput" placeholder="Enter password">
-    <button onclick="checkPassword()">Submit</button>
-
-    <p id="message"></p>
+    <div class="container">
+        <h1>intern Curriculum villa front desk</h1>
+        <p>Please enter the password to access the link:</p>
+        <input type="password" id="passwordInput" placeholder="Enter password">
+        <button onclick="checkPassword()">Submit</button>
+        <p id="message"></p>
+    </div>
 
     <script>
         const correctPassword = "janu2024"; // Set your password here
@@ -60,4 +77,3 @@
     </script>
 </body>
 </html>
-
